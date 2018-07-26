@@ -1,0 +1,35 @@
+const calculateDistancePoints = (distance, hillSize, kPoint) => {
+  if (hillSize !== 'normal' && hillSize !== 'large' && hillSize !== 'flying') {
+    console.log('Hill size must be one of: normal, large, flying');
+    return;
+  }
+
+  const pointedDistance = Math.round((distance - kPoint) * 2) / 2;
+  const distancePoints = (hillPoints, pointedDistance, hillMultiplier) => hillPoints + (pointedDistance * hillMultiplier);
+
+  switch (hillSize.toUpperCase()) {
+    case 'NORMAL': {
+      const hillPoints = 60;
+      const hillMultiplier = 2;
+
+      return distancePoints(hillPoints, pointedDistance, hillMultiplier);
+      
+    }
+    case 'LARGE': {
+      const hillPoints = 60;
+      const hillMultiplier = 1.8;
+
+      return distancePoints(hillPoints, pointedDistance, hillMultiplier);
+    }
+    case 'FLYING': {
+      const hillPoints = 120;
+      const hillMultiplier = 1.2;
+
+      return distancePoints(hillPoints, pointedDistance, hillMultiplier);
+    }
+  }
+}
+
+
+
+module.exports = calculateDistancePoints;
