@@ -4,6 +4,11 @@ const calculateDistancePoints = (distance, hillSize, kPoint) => {
     return;
   }
 
+  if (distance < 0 || kPoint < 0) {
+    console.log('Distance and kPoint cannot be smaller than 0');
+    return;
+  }
+
   const pointedDistance = Math.round((distance - kPoint) * 2) / 2;
   const distancePoints = (hillPoints, pointedDistance, hillMultiplier) => hillPoints + (pointedDistance * hillMultiplier);
 
