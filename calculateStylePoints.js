@@ -1,5 +1,5 @@
 const calculateStylePoints = (styleNotes) => {
-  if (!styleNotes.every(isValue) && styleNotes.length === 5) {
+  if (!styleNotes.every(isValue) || styleNotes.length !== 5) {
     console.log('Notes are incorrect. Note should be equal or larger than 0, equal or smaller than 20 and should be multiple of 0.5');
     return;
   }
