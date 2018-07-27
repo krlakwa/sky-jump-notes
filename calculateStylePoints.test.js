@@ -2,7 +2,7 @@ const assert = require('assert');
 const calculateStylePoints = require('./calculateStylePoints');
 
 describe('calculateStylePoints', () => {
-  describe('stylePoints data validation', () => {
+  describe('when data is validating', () => {
     it('should be an array with 5 elements', () => {
       const actual = calculateStylePoints([19, 5, 4, 3]);
 
