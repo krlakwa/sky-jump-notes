@@ -2,7 +2,7 @@ const assert = require('assert');
 const calculateDistancePoints = require('./calculateDistancePoints');
 
 describe('calculateDistancePoints', () => {
-  describe('distancePoints data validation', () => {
+  describe('when data is validating', () => {
     it('should return undefined when hillSize is not one of: normal, medium, flying', () => {
       const actual = calculateDistancePoints(110, 'small', 100);
 
