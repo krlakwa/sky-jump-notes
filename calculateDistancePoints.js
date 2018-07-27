@@ -10,8 +10,7 @@ const calculateDistancePoints = (distance, hillSize, kPoint) => {
   }
 
   const pointedDistance = Math.round((distance - kPoint) * 2) / 2;
-  const distancePoints = (hillPoints, pointedDistance, hillMultiplier) => hillPoints + (pointedDistance * hillMultiplier);
-
+  
   switch (hillSize.toUpperCase()) {
     case 'NORMAL': {
       const hillPoints = 60;
@@ -35,6 +34,6 @@ const calculateDistancePoints = (distance, hillSize, kPoint) => {
   }
 }
 
-
+const distancePoints = (hillPoints, pointedDistance, hillMultiplier) => hillPoints + (pointedDistance * hillMultiplier);
 
 module.exports = calculateDistancePoints;
