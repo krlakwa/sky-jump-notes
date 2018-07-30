@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./*.test.js",
+    "test:distance": "mocha calculateDistancePoints.test.js -w",
+    "test:style": "mocha calculateStylePoints.test.js -w",
+    "test:total": "mocha calculateTotalPoints.test.js -w"
   },
   "repository": {
     "type": "git",
